@@ -32,6 +32,30 @@ class WebRequestHandler(BaseHTTPRequestHandler):
         	<label for="q">  Búsqueda </label>
         	<input type="text" name="q" required />
     	</form>
+    	
+    	<article style="display: flex; flex-direction: row; gap: 20px; justify-content: space-around;">
+                <div class="left" style="display: flex; flex-direction: column;">
+                    <div>
+                        <h2><a href=".\books\1" style="text-decoration: none; color: inherit;">C# avanzado</a></h2>
+                        <p>Pedro López, Juan Ruiz</p>
+                    </div>
+                    <div>
+                        <h2><a href="\books\book2.html" style="text-decoration: none; color: inherit;">El nuevo sistema operativo MS-DOS</a></h2>
+                        <p>Joe Medina</p>
+                    </div>
+                </div>
+                <div class="right" style="display: flex; flex-direction: column;">
+                    <div>
+                        <h2><a href="\books\book3.html" style="text-decoration: none; color: inherit;">La Metamorfosis</a></h2>
+                        <p>Patrick Alvarado</p>
+                    </div>
+                    <div>
+                        <h2><a href="\books\book4.html" style="text-decoration: none; color: inherit;">La Danza de Hielo y Fuego</a></h2>
+                        <p>R.R. González</p>
+                    </div>
+                </div>
+            </article>
+
     
         <p>  {self.query_data}   </p>
           <p>  {books}   </p>
