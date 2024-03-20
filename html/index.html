@@ -4,23 +4,65 @@
         <title>Proyecto 01</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap">
     </head>
-    <body>
-    <h1>La Biblioteca</h1>       
+    <body style = "background-color: white; padding: 0; margin:0; box-sizing: border-box; font-family: 'Madimi One', sans-serif;">
+    <h1 style = "background-color: black; color: white; text-align: center; border-radius: 10px;">La Biblioteca</h1>       
     
-    <article>
-            <h2><a href="\books\1"> C# avanzado </a></h2>
-            <p> Pedro López, Juan Ruiz </p>
-            <br> 
-            <h2><a href="\books\2"> El nuevo sistema operativo MS-DOS</a></h2>
-            <p> Joe Medina </p>
-            <br> 
-            <h2><a href="\books\3"> La Metamorfosis </a></h2>
-            <p> Patrick Alvarado </p>
-            <br> 
-            <h2><a href="\books\4"> La Danza de Hielo y Fuego </a></h2>
-            <p> R.R. González </p>
+    <article style="display: flex; justify-content: space-around;">
+        <form action="/search" method = "get">
+                <label> Buscar libro: </label>
+                <input type="text" style="padding: 5px; border: 1px solid black;
+                border-radius: 5px;"/>
+                <input type="submit" value="Buscar →" style="color: black; padding:5px 10px;
+                border: none;"/><br>
+           </forms>
+        <div class="left">
+            <div class="book1" style="display: flex; flex-direction: row">
+                <div class="info" style="display: flex; flex-direction:column; justify-content:center; padding-right: 30px;">
+                    <h2><a href="\books\1"> C# avanzado </a></h2>
+                    <p> Pedro López, Juan Ruiz </p>
+                </div>
+                <div class="img">
+                    <img style="width: 200px; height: 250px; border-radius: 10px;" src="https://m.media-amazon.com/images/I/71qwPeyWbSL._AC_UF1000,1000_QL80_.jpg" alt="Foto Libro 1">
+                </div>
+                <br> 
+            </div>
+            <div class="book2" style="display: flex; flex-direction: row">
+                <div class="info" style="display: flex; flex-direction:column; justify-content:center; padding-right: 30px;">
+                    <h2><a href="\books\2"> El nuevo sistema operativo MS-DOS</a></h2>
+                    <p> Joe Medina </p>
+                </div>
+                <div class="img">
+                    <img style="width: 200px; height: 250px; border-radius: 10px;" src="https://m.media-amazon.com/images/I/9131BGEQILL._AC_UF1000,1000_QL80_.jpg" alt="Foto Libro 1">
+                </div>
+                <br> 
+            </div>
+        </div>
+        <div class="right">
+            <div class="book3" style="display: flex; flex-direction: row">
+                <div class="info" style="display: flex; flex-direction:column; justify-content:center; padding-right: 30px;">
+                    <h2><a href="\books\3"> La Metamorfosis </a></h2>
+                    <p> Patrick Alvarado </p>
+                </div>
+                <div class="img">
+                    <img style="width: 200px; height: 250px; border-radius: 10px;" src="https://elpetirrojoec.com/wp-content/uploads/2023/08/786985_IMAGEN_TAPA_G_001-340x520.jpg" alt="Foto Libro 1">
+                </div>
+                <br> 
+            </div>
+            <div class="book4" style="display: flex; flex-direction: row">
+                <div class="info" style="display: flex; flex-direction:column; justify-content:center; padding-right: 30px;">
+                    <h2><a href="\books\4"> La Danza de Hielo y Fuego </a></h2>
+                    <p> R.R. González </p>
+                </div>
+                <div class="img">
+                    <img style="width: 200px; height: 250px; border-radius: 10px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIMAoob4cgMVeVBtbBnnq-XHuAbbR5H0Sio0OihRm3ocp6VRDNqPRaIwIqY5JEWUE6qiI&usqp=CAU" alt="Foto Libro 1">
+                </div>
+                <br> 
+            </div>
+        </div>
     </article>
+
     </body>
 </html>

@@ -158,9 +158,23 @@ class WebRequestHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-Type", "text/html")
         self.end_headers()
+        
+        # Formulario de búsqueda
+        search_form = """
+        <form action="/search" method="GET">
+            <label for="q">Buscar libros:</label>
+            <input type="text" name="q" id="q" placeholder="Ingrese el título del libro...">
+            <input type="submit" value="Buscar">
+        </form>
+        """
+    
+        # Agrega el formulario de búsqueda al HTML de la página de inicio
         with open('html/index.html') as f:
             response = f.read()
+            response = response.replace("<h1> Retro Books </h1>", "<h1> Retro Books </h1>" + search_form)
         self.wfile.write(response.encode("utf-8"))
+        
+        
 
 if __name__ == "__main__":
     print("Server starting...")
